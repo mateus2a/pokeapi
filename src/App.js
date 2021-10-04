@@ -63,10 +63,10 @@ const App = () => {
                 </div>
                 <div>
                   <span>
-                    <strong>Height</strong>: {pokemon.height * 10} cm
+                    <strong>Height</strong>: {pokemon.height * 10}cm
                   </span>
                   <span>
-                    <strong>Weight</strong>: {pokemon.weight / 10} kg
+                    <strong>Weight</strong>: {pokemon.weight / 10}kg
                   </span>
                   <span>
                     <strong>Type</strong>: {pokemon.types[0].type.name}
