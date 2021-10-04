@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import api from './services/pokeapi';
+import pokeball from './assets/pokeball.svg';
 import './App.css';
 
 const App = () => {
@@ -42,7 +43,14 @@ const App = () => {
             onChange={handleChange}
           />
           <button type="submit">
-            {isLoading ? <span>carregando...</span> : <>Search</>}
+            {!isLoading ? (
+              <>
+                <span>Buscar</span>
+                <img class="pokeball" alt="pokeball img" src={pokeball} />
+              </>
+            ) : (
+              <span>carregando...</span>
+            )}
           </button>
         </form>
       </div>
