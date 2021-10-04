@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import api from './services/pokeapi';
+import './App.css';
+
 const App = () => {
   const [pokemon, setPokemon] = useState(null);
   const [error, setError] = useState(null);
@@ -27,8 +29,9 @@ const App = () => {
       setPokemon(null);
     }
   };
+
   return (
-    <div>
+    <div className="container">
       <h1>Welcome to pokedex</h1>
       <p>Enter a name of a pokemon</p>
       <form onSubmit={handleSubmit}>
