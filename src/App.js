@@ -48,34 +48,36 @@ const App = () => {
       </div>
       {error && <span>{error}</span>}
       {pokemon && (
-        <div key={pokemon.id}>
-          {isLoading ? (
-            <span>carregando...</span>
-          ) : (
-            <>
-              <div>
-                <h2>{pokemon.name}</h2>
-                <img
-                  src={pokemon.sprites['front_default']}
-                  alt={pokemon.name}
-                />
-              </div>
-              <div>
-                <span>
-                  <strong>Height</strong>: {pokemon.height * 10} cm
-                </span>
-                <span>
-                  <strong>Weight</strong>: {pokemon.weight / 10} kg
-                </span>
-                <span>
-                  <strong>Type</strong>: {pokemon.types[0].type.name}
-                </span>
-                <span>
-                  <strong>id</strong>: {pokemon.id}
-                </span>
-              </div>
-            </>
-          )}
+        <div className="pokemon-container" key={pokemon.id}>
+          <div className="pokemon">
+            {isLoading ? (
+              <span>carregando...</span>
+            ) : (
+              <>
+                <div>
+                  <h2>{pokemon.name}</h2>
+                  <img
+                    src={pokemon.sprites['front_default']}
+                    alt={pokemon.name}
+                  />
+                </div>
+                <div>
+                  <span>
+                    <strong>Height</strong>: {pokemon.height * 10} cm
+                  </span>
+                  <span>
+                    <strong>Weight</strong>: {pokemon.weight / 10} kg
+                  </span>
+                  <span>
+                    <strong>Type</strong>: {pokemon.types[0].type.name}
+                  </span>
+                  <span>
+                    <strong>id</strong>: {pokemon.id}
+                  </span>
+                </div>
+              </>
+            )}
+          </div>
         </div>
       )}
     </div>

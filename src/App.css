@@ -34,3 +34,14 @@
 .search form {
   margin-top: 2rem;
 }
+
+.pokemon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4a4a4a;
+  justify-content: center;
+  opacity: 0.6;
+  margin-top: 2rem;
+  border-radius: 6px;
+}
