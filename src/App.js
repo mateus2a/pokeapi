@@ -32,18 +32,20 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Welcome to pokedex</h1>
-      <p>Enter a name of a pokemon</p>
-      <form onSubmit={handleSubmit}>
-        <input
-          value={typedPokemon}
-          placeholder="Name/id of the pokemon"
-          onChange={handleChange}
-        />
-        <button type="submit">
-          {isLoading ? <span>carregando...</span> : <>Search</>}
-        </button>
-      </form>
+      <div className="search">
+        <h1>Seja bem vindo à Pokedex</h1>
+        <p>Digite o nome ou id do pokemon para começar</p>
+        <form onSubmit={handleSubmit}>
+          <input
+            value={typedPokemon}
+            placeholder="Name/id of the pokemon"
+            onChange={handleChange}
+          />
+          <button type="submit">
+            {isLoading ? <span>carregando...</span> : <>Search</>}
+          </button>
+        </form>
+      </div>
       {error && <span>{error}</span>}
       {pokemon && (
         <div key={pokemon.id}>
