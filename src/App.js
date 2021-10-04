@@ -39,7 +39,7 @@ const App = () => {
         <form onSubmit={handleSubmit}>
           <input
             value={typedPokemon}
-            placeholder="Name/id of the pokemon"
+            placeholder="Digite o nome ou id do pokemon"
             onChange={handleChange}
           />
           <button type="submit">
